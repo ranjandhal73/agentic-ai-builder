@@ -1,0 +1,25 @@
+name: E2E Regression Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  trigger-e2e:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Playwright E2E Repository
+        run: |
+          curl -L \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.E2E_REPO_TOKEN }}" \
+            https://api.github.com/repos/ranjandhal73/Playwright_Test/dispatches \
+            -d '{
+              "event_type": "run-e2e",
+              "client_payload": {
+                "pr_number": "${{ github.event.pull_request.number }}"
+              }
+            }'
