@@ -39,7 +39,7 @@ jobs:
               "pr_number": "${PR_NUMBER}",
               "event_name": "${EVENT_NAME}",
               "commit_sha": "${SHA}",
-              "source_repo": "${SOURCE_REPO}"
+              "source_repo": "${SOURCE_REPO}",
               "base_url": "${BASE_URL}"
             }
           }
