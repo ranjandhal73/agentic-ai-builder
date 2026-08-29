@@ -65,7 +65,7 @@ export default function Home() {
         </Badge>
 
         <h1 className="mx-auto max-w-3xl text-balance font-serif text-5xl leading-tight tracking-tight sm:text-5xl lg:text-7xl z-10">
-          <GrayTitle>Transform Ideas into</GrayTitle>
+          <GrayTitle>Transform Ideas-into</GrayTitle>
           <br />
           <BlueTitle>Powerful AI Solutions.</BlueTitle>
         </h1>
