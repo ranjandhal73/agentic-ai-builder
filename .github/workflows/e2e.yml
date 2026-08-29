@@ -24,6 +24,7 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           SHA: ${{ github.sha }}
           SOURCE_REPO: ${{ github.repository }}
+          BASE_URL: ${{ secrets.E2E_BASE_URL }}
         run: |
           curl -L \
             -X POST \
@@ -39,6 +40,7 @@ jobs:
               "event_name": "${EVENT_NAME}",
               "commit_sha": "${SHA}",
               "source_repo": "${{ github.repository }}"
+              "base_url": "${BASE_URL}"
             }
           }
           EOF
